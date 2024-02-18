@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/master.css" />
+    <title>CRUD OPERATION</title>
+  </head>
+  <body>
+    <div class="w-50 mx-auto shadow p-5 m-5">
+      <h1>CRUD SYSTEM</h1>
+      <label for="">Product Name:</label>
+      <input type="text" class="form-control mb-3" id="nameInput" />
+
+      <label for="">Product Category:</label>
+      <input type="text" class="form-control mb-3" id="categoryInput" />
+
+      <label for="">Product price:</label>
+      <input type="number" class="form-control mb-3" id="priceInput" />
+
+      <label for="">Product description:</label>
+      <textarea class="form-control mb-3" id="descriptionInput"></textarea>
+
+      <button onclick="creatProduct ()" id="addBtn" class="btn btn-outline-info">add product</button>
+
+      <button onclick="clearProductValue ()" class="btn btn-outline-info" id="clear">clear</button>
+    </div>
+
+    <input onkeyup="searchProduct ()" type="search" name="search" id="searchInput" placeholder="search..." class="form-control w-50 m-auto my-5">
+
+    <table class="table container table-striped">
+      <thead>
+        <tr class="text-center">
+          <td class="fw-bold">Index</td>
+          <td class="fw-bold">Name</td>
+          <td class="fw-bold">Category</td>
+          <td class="fw-bold">Price</td>
+          <td class="fw-bold">Description</td>
+          <td class="fw-bold">Update</td>
+          <td class="fw-bold">Delete</td>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script src="JS/all.min.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/master.js"></script>
+  </body>
+</html>
